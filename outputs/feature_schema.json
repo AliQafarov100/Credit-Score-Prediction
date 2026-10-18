@@ -1,0 +1,18 @@
+{
+    "score_model_features": [
+        "RevolvingUtilizationOfUnsecuredLines",
+        "age",
+        "NumberOfTime30-59DaysPastDueNotWorse",
+        "DebtRatio",
+        "MonthlyIncome",
+        "NumberOfOpenCreditLinesAndLoans",
+        "NumberOfTimes90DaysLate",
+        "NumberRealEstateLoansOrLines",
+        "NumberOfTime60-89DaysPastDueNotWorse",
+        "NumberOfDependents",
+        "total-number_of_lates",
+        "log_transformed-montly-income"
+    ],
+    "score_target": "SeriousDlqin2yrs",
+    "split_strategy": "K-Fold cross-validation"
+}

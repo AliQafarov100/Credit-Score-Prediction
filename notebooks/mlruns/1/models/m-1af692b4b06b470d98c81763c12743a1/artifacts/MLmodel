@@ -1,0 +1,26 @@
+artifact_path: file:c:/Users/Ali/Desktop/credict_risk_prediction/notebooks/mlruns/1/models/m-1af692b4b06b470d98c81763c12743a1/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.14.8
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types:
+    - numpy.dtype
+    - xgboost.core.Booster
+    - xgboost.sklearn.XGBClassifier
+mlflow_version: 3.17.0
+model_id: m-1af692b4b06b470d98c81763c12743a1
+model_size_bytes: 1829184
+model_uuid: m-1af692b4b06b470d98c81763c12743a1
+prompts: null
+run_id: c31c19db0c6b40129455452fb8f6b7fa
+utc_time_created: '2026-10-18 19:08:20.272856'

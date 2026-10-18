@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-18T20:11:53.978141+00:00", "model_name": "CreditScoreXGBModel", "model_version": 1, "input_hash": "3164ae8bcbecb0538e984bf9dff1906fb5298822488da65a361c51cc10824111", "prediction": "[0.95931464 0.04068534]"}
