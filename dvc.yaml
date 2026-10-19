@@ -1,0 +1,9 @@
+stages:
+  train_score:
+    cmd: python -m src.training_pipeline
+    deps:
+    - outputs/model_table.csv
+    - src
+    outs:
+    - models/score_model_complete_pipeline.joblib
+    - outputs/feature_schema.json
