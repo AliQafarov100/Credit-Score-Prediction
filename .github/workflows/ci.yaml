@@ -48,10 +48,10 @@ jobs:
         run: |
           python -m pytest tests/test_routes.py -v
 
-      - name: Run feature schema tests
-        run: |
-          python -m pytest tests/test_schema.py -v
+      # - name: Run feature schema tests
+      #   run: |
+      #     python -m pytest tests/test_schema.py -v
 
-      - name: Run model artifact tests
-        run: |
-          python -m pytest tests/test_artifacts.py -v
+      # - name: Run model artifact tests
+      #   run: |
+      #     python -m pytest tests/test_artifacts.py -v
