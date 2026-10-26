@@ -1,4 +1,6 @@
 [core]
-    remote = localstorage
+    remote = myremote
 ['remote "localstorage"']
     url = C:\dvc-storage
+['remote "myremote"']
+    url = s3://amzn-s3-creditrisk/dvc-store

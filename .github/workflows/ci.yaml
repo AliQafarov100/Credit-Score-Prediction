@@ -29,29 +29,29 @@ jobs:
           pip install -r requirements.txt
           pip install pytest httpx "dvc[s3]" awscli
 
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v4
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: eu-north-1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1
 
-      # - name: Debug AWS access
-      #   run: |
-      #     aws sts get-caller-identity
+      - name: Debug AWS access
+        run: |
+          aws sts get-caller-identity
 
-      # - name: Pull DVC artifacts
-      #   run: |
-      #     dvc pull -v --force
+      - name: Pull DVC artifacts
+        run: |
+          dvc pull -v --force
 
       - name: Run API tests
         run: |
           python -m pytest tests/test_routes.py -v
 
-      # - name: Run feature schema tests
-      #   run: |
-      #     python -m pytest tests/test_schema.py -v
+      - name: Run feature schema tests
+        run: |
+          python -m pytest tests/test_schema.py -v
 
-      # - name: Run model artifact tests
-      #   run: |
-      #     python -m pytest tests/test_artifacts.py -v
+      - name: Run model artifact tests
+        run: |
+          python -m pytest tests/test_artifacts.py -v
