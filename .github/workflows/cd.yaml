@@ -25,6 +25,27 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Debug OIDC claims
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const response = await fetch(
+              `${process.env.ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com`,
+              {
+                headers: {
+                  Authorization: `bearer ${process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN}`
+                }
+              }
+            );
+
+            if (!response.ok) {
+              throw new Error(`OIDC request failed: ${response.status}`);
+            }
+
+            const result = await response.json();
+            const payload = JSON.parse(
+              Buffer.from(result.value.split('.')[1], 'base64url').toString()
+            );
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
