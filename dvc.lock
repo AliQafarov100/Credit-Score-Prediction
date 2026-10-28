@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  train_score:
+    cmd: python -m src.training_pipeline
+    deps:
+    - path: outputs/model_table.csv
+      hash: md5
+      md5: 31a68eb7101fa8a2a99dc4e3f81bc59b
+      size: 11561838
+    - path: src
+      hash: md5
+      md5: f66ea7ce96f8feb59f97211e9de1ed30.dir
+      size: 35162
+      nfiles: 10
+    outs:
+    - path: models/score_model_complete_pipeline.joblib
+      hash: md5
+      md5: 6df8166ec6d9ab68aea07447d7476a47
+      size: 1683654
+    - path: outputs/feature_schema.json
+      hash: md5
+      md5: 376af53c9a34315a5654d319024bf1ff
+      size: 597

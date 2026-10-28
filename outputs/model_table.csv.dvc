@@ -1,0 +1,5 @@
+outs:
+- md5: 31a68eb7101fa8a2a99dc4e3f81bc59b
+  size: 11561838
+  hash: md5
+  path: model_table.csv
