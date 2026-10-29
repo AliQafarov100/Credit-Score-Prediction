@@ -17,8 +17,8 @@ jobs:
     env:
       AWS_REGION: us-east-1
       ECR_REGISTRY: 123537042913.dkr.ecr.us-east-1.amazonaws.com
-      ECR_REPOSITORY_API: creditrisk-api
-      ECR_REPOSITORY_GRADIO: creditrisk-gradio
+      ECR_REPOSITORY_API: credict_risk_prediction-api
+      ECR_REPOSITORY_GRADIO: credict_risk_prediction-gradio
       EKS_CLUSTER_NAME: creditrisk-eks
       IMAGE_TAG: ${{ github.sha }}
 
