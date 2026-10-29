@@ -39,7 +39,7 @@ jobs:
 
       - name: Build API image
         run: |
-          docker build -t $ECR_REPOSITORY_API:latest -f Dockerfile.api
+          docker build -t $ECR_REPOSITORY_API:latest -f Dockerfile.api .
 
       - name: Tag API image
         run: |
@@ -53,7 +53,7 @@ jobs:
 
       - name: Build Gradio image
         run: |
-          docker build -t $ECR_REPOSITORY_GRADIO:latest -f Dockerfile.gradio
+          docker build -t $ECR_REPOSITORY_GRADIO:latest -f Dockerfile.gradio .
 
       - name: Tag Gradio image
         run: |
