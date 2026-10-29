@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: creditrisk-api
+  name: creditrisk-gradio
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: creditrisk-api
+      app: creditrisk-gradio
   template:
     metadata:
       labels:
-        app: creditrisk-api
+        app: creditrisk-gradio
     spec:
       containers:
-        - name: creditrisk-api
+        - name: creditrisk-gradio
           image: 123537042913.dkr.ecr.us-east-1.amazonaws.com/credict_risk_prediction-gradio:latest
           imagePullPolicy: Always
           ports:
